@@ -45,11 +45,7 @@ deliveries(){
     });
   }
 customers(){
-    return store.customers.filter(customer => {
-      return customer.mealId == this.id;
-            return this.customers().map(delivery => delivery.meal());
-
-    });
+            return this.customers().map(customer => customer.meal());
   }
 
 }
