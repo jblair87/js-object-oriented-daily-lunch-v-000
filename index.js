@@ -70,7 +70,7 @@ constructor(mealId, neighborhoodId, customerId)
 this.id = deliveryIds++;
 this.meal.id = mealId;
 this.neighborhood.id = neighborhoodId;
-this.customer.id = customerId;
+this.customerId = customerId;
 store.deliveries.push(this);
 }
 customer(){
