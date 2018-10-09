@@ -38,6 +38,14 @@ this.id = mealIds++;
 this.title = title;
 this.price = price;
 store.meals.push(this);}
+
+deliveries(){
+    return store.deliveries.filter(delivery => {
+      return delivery.mealId == this.id;
+    });
+  }
+
+
 }
 
 class Customer {
