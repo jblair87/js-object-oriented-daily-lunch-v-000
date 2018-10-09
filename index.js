@@ -44,9 +44,10 @@ deliveries(){
       return delivery.mealId == this.id;
     });
   }
-customers(){
-            return this.customers().map(customer => customer.meal());
-  }
+customers() {
+      const allCustomers = this.deliveries().map(delivery => delivery.customer());
+      return [...new Set(allCustomers)];
+    }
  static byPrice() {
       return store.meals.sort((a, b) => a.price < b.price);
     }
