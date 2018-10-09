@@ -75,7 +75,7 @@ store.deliveries.push(this);
 }
 customer(){
     return store.customers.find(customer => {
-      return customerId == this.customerId;
+      return customer.id == this.customerId;
     });
   }
 
